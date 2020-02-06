@@ -8,10 +8,10 @@ from .models import Pet, Vaccine
 
 
 class PetAdmin(admin.ModelAdmin):
-	list_display = ['pet_name','image','species','breed','age','sex','submitter']
+	list_display = ['pet_name','species','breed','age','sex','submitter']
 
 	#fields = ['image_tag']
-	
+	search_fields = ['pet_name','submitter']
 
 """
 	def image(self, obj):
