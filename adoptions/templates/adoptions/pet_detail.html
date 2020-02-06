@@ -1,0 +1,16 @@
+{% extends "adoptions/base.html" %}
+
+{% block content %}
+
+
+<h1>{{pet.pet_name}}</h1>
+
+<img src="{{pet.image.url}}" class="rounded" height="300">
+
+<ul>
+{% for vaccination in pet.vaccinations.all %}
+	<li>{{vaccination.name}}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

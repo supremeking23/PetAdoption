@@ -1,0 +1,13 @@
+{% extends "adoptions/base.html" %}
+
+{% block content %}
+
+{% for pet in pets.all %}
+
+
+<p><a href="{% url 'detail' pet.id %}">{{pet.pet_name|capfirst}}</a></p>
+
+
+{% endfor %}
+
+{% endblock %}
